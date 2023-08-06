@@ -13,6 +13,20 @@
       color: #777;
       line-height: 1.8;
     }
+    footer {
+        color: white;
+        background-color: black;
+        padding: 32px;
+        text-align: center;
+        opacity: 0.5;
+    }
+    footer:hover {
+        opacity: 1.0;
+    }
+
+    #about {
+        padding: 32px;
+    }
     
     /* Create a Parallax Effect */
     .bgimg-1, .bgimg-2, .bgimg-3 {
@@ -27,21 +41,21 @@
       background-image: url('/img/parallax1.jpg');
       min-height: 100%;
     }
-    
-    /* Second image (Portfolio) */
-    .bgimg-2 {
-      background-image: url("/w3images/parallax2.jpg");
-      min-height: 400px;
-    }
-    
-    /* Third image (Contact) */
-    .bgimg-3 {
-      background-image: url("/w3images/parallax3.jpg");
-      min-height: 400px;
-    }
-    
+
     .w3-wide {letter-spacing: 10px;}
     .w3-hover-opacity {cursor: pointer;}
+    .mySlides {display:none}
+    .w3-left, .w3-right, .w3-badge {cursor:pointer}
+    .w3-badge {height:13px;width:13px;padding:0}
+    .w3-dropdown-hover:hover .w3-dropdown-content .w3-dropdown-content {display:none}
+    .w3-dropdown-hover:hover .w3-dropdown-hover:hover .w3-dropdown-content {display:inline;left:100%}
+
+    button.readmore {
+        padding:12px 24px!important;
+        color:#000!important;
+        background-color:#fff!important;
+        border:1px solid #ccc!important;
+    }
     
     /* Turn off parallax scrolling for tablets and phones */
     @media only screen and (max-device-width: 1600px) {
@@ -55,7 +69,7 @@
 <body>
 
 <!-- Navbar (sit on top) -->
-<div class="w3-top">
+<div class="w3-top w3-teal w3-opacity w3-hover-opacity-off">
     <div class="w3-bar" id="myNavbar">
       <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
         <i class="fa fa-bars"></i>
@@ -66,17 +80,28 @@
         <button class="w3-button"><i class="fa fa-globe"></i> TRAVEL</button>
         <div class="w3-dropdown-content w3-bar-block w3-card-4">
             <div class="w3-dropdown-hover">
-                <button class="w3-button">TEST</button>
+                <button class="w3-button w3-white">AFRICA</button>
                 <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                    <a href="#" class="w3-bar-item w3-button">TEST2</a>
+                    <a href="#" class="w3-bar-item w3-button">ZANSIBAR</a>
+                    <a href="#" class="w3-bar-item w3-button">UGANDA</a>
                 </div>
             </div>
-          <a href="#" class="w3-bar-item w3-button">AFRICA</a>
-          <a href="#" class="w3-bar-item w3-button">ASIA</a>
-          <a href="#" class="w3-bar-item w3-button">AUSTRALIA</a>
-          <a href="#" class="w3-bar-item w3-button">EUROPE</a>
-          <a href="#" class="w3-bar-item w3-button">MIDDLE AMERICA</a>
-          <a href="#" class="w3-bar-item w3-button">SOUTH AMERICA</a>
+            <div class="w3-dropdown-hover">
+                <button class="w3-button">MIDDLE AMERICA</button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="#" class="w3-bar-item w3-button">BELIZE</a>
+                    <a href="#" class="w3-bar-item w3-button">GUATEMALA</a>
+                    <a href="#" class="w3-bar-item w3-button">MEXICO</a>
+                </div>
+            </div>
+            <div class="w3-dropdown-hover">
+                <button class="w3-button">SOUTH AMERICA</button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="#" class="w3-bar-item w3-button">ARGENTINA</a>
+                    <a href="#" class="w3-bar-item w3-button">BRASIL</a>
+                    <a href="#" class="w3-bar-item w3-button">CHILE</a>
+                </div>
+            </div>
         </div>
       </div>
       <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
@@ -99,8 +124,154 @@
     </div>
 </div>
 
+<!-- Container (Recent Blog Posts) -->
+<div class="w3-content w3-display-container w3-padding-64" id="recent">
+    <h3 class="w3-center">RECENT BLOG POSTS</h3>
+    <div class="w3-row mySlides w3-animate-opacity">
+        <div class="w3-col m6 l4 w3-opacity w3-hover-opacity-off">
+            <div class="w3-card-4 w3-margin">
+                <img src="/img/test/lion1.jpg" alt="Lion" class="w3-image">
+                <div class="w3-container w3-center">
+                    <h3><b>Queen Elisabeth National Park</b></h3>
+                    <h5>UGANDA , <span class="w3-opacity">SEP 26, 2022</span></h5>
+                </div>
+                <div class="w3-container">
+                    <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat.</p>
+                    <div class="w3-row">
+                      <div class="w3-col m8 s12">
+                        <p><button class="w3-button readmore"><b>READ MORE »</b></button></p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w3-col m6 l4 w3-opacity w3-hover-opacity-off">
+            <div class="w3-card-4 w3-margin">
+                <img src="/img/test/chimpanzee1.JPG" alt="chimp" class="w3-image">
+                <div class="w3-container w3-center">
+                    <h3><b>Queen Elisabeth National Park</b></h3>
+                    <h5>UGANDA , <span class="w3-opacity">SEP 26, 2022</span></h5>
+                </div>
+                <div class="w3-container">
+                    <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat.</p>
+                    <div class="w3-row">
+                      <div class="w3-col m8 s12">
+                        <p><button class="w3-button readmore"><b>READ MORE »</b></button></p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w3-col m6 l4 w3-opacity w3-hover-opacity-off">
+            <div class="w3-card-4 w3-margin">
+                <img src="/img/test/elephant1.JPG" alt="elephant" class="w3-image">
+                <div class="w3-container w3-center">
+                    <h3><b>Queen Elisabeth National Park</b></h3>
+                    <h5>UGANDA , <span class="w3-opacity">SEP 26, 2022</span></h5>
+                </div>
+                <div class="w3-container">
+                    <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat.</p>
+                    <div class="w3-row">
+                      <div class="w3-col m8 s12">
+                        <p><button class="w3-button readmore"><b>READ MORE »</b></button></p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w3-row mySlides w3-animate-opacity">
+        <div class="w3-col m6 l4 w3-opacity w3-hover-opacity-off">
+            <div class="w3-card-4 w3-margin">
+                <img src="img/test/gorilla1.JPG" alt="gorilla" class="w3-image">
+                <div class="w3-container w3-center">
+                    <h3><b>Queen Elisabeth National Park</b></h3>
+                    <h5>UGANDA , <span class="w3-opacity">SEP 26, 2022</span></h5>
+                </div>
+                <div class="w3-container">
+                    <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat.</p>
+                    <div class="w3-row">
+                      <div class="w3-col m8 s12">
+                        <p><button class="w3-button readmore"><b>READ MORE »</b></button></p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w3-col m6 l4 w3-opacity w3-hover-opacity-off">
+            <div class="w3-card-4 w3-margin">
+                <img src="img/test/massai1.JPG" alt="massai" class="w3-image">
+                <div class="w3-container w3-center">
+                    <h3><b>Queen Elisabeth National Park</b></h3>
+                    <h5>UGANDA , <span class="w3-opacity">SEP 26, 2022</span></h5>
+                </div>
+                <div class="w3-container">
+                    <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat.</p>
+                    <div class="w3-row">
+                      <div class="w3-col m8 s12">
+                        <p><button class="w3-button readmore"><b>READ MORE »</b></button></p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w3-col m6 l4 w3-opacity w3-hover-opacity-off">
+            <div class="w3-card-4 w3-margin">
+                <img src="img/test/rhino1.JPG" alt="rhino" class="w3-image">
+                <div class="w3-container w3-center">
+                    <h3><b>Queen Elisabeth National Park</b></h3>
+                    <h5>UGANDA , <span class="w3-opacity">SEP 26, 2022</span></h5>
+                </div>
+                <div class="w3-container">
+                    <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat.</p>
+                    <div class="w3-row">
+                      <div class="w3-col m8 s12">
+                        <p><button class="w3-button readmore"><b>READ MORE »</b></button></p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="w3-button w3-teal w3-hover-teal w3-opacity w3-hover-opacity-off w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-teal w3-hover-teal w3-opacity w3-hover-opacity-off w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+    <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-teal" onclick="currentDiv(1)"></span>
+        <span class="w3-badge demo w3-border w3-transparent w3-hover-teal" onclick="currentDiv(2)"></span>
+    </div>
+</div>
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+    
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" w3-grey", "");
+      }
+      x[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " w3-grey";
+    }
+</script>
+
  <!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
+<div class="w3-content w3-container" id="about">
     <h3 class="w3-center">ABOUT ME</h3>
     <p class="w3-center"><em>I love photography</em></p>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -108,7 +279,9 @@
       qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     <div class="w3-row">
       <div class="w3-col m6 w3-center w3-padding-large">
-        <p><b><i class="fa fa-user w3-margin-right"></i>Miriam Helmstetter</b></p><br>
+        <div class="w3-container w3-teal w3-opacity">
+            <p><b><i class="fa fa-user w3-margin-right"></i>Miriam Helmstetter</b></p>
+        </div>
         <img src="/img/avatar_miriam_1.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
       </div>
   
@@ -126,7 +299,7 @@
     <!-- Quote -->
     <div class="w3-panel w3-leftbar w3-light-grey w3-center">
         <span style="font-size:50px;line-height:0.9em;opacity:0.2;float:left">&#10077;</span>
-        <p class="w3-xlarge" style="margin-top:-10px;opacity:0.5;"><i>TAKE ONLY<span style="font-family:'Sofia';font-size:xxx-large;"> MEMORIES</span>, LEAVE ONLY<span style="font-family:'Sofia';font-size:xxx-large;"> FOOTPRINTS</span></i></p>
+        <p class="w3-large" style="margin-bottom:+10px;opacity:0.5;"><i>TAKE ONLY<span style="font-family:'Sofia';font-size:xx-large;"> MEMORIES</span>, LEAVE ONLY<span style="font-family:'Sofia';font-size:xx-large;"> FOOTPRINTS</span></i></p>
         <p style="margin-top:-40px;opacity:0.2;" class="w3-right-align">- Chief Seattle</p>
     </div>
 </div>
@@ -149,10 +322,10 @@
       <span class="w3-xlarge">3+</span><br>
       Animals Spotted
     </div>
-  </div>
+</div>
   
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+<footer>
     <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
     <div class="w3-xlarge w3-section">
       <i class="fa fa-facebook-official w3-hover-opacity"></i>
