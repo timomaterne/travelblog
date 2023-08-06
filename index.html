@@ -17,10 +17,16 @@
   #about {padding: 32px;}
     
   /* Create a Parallax Effect */
-  .bgimg-1, .bgimg-2, .bgimg-3 {background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;}
-    
-  /* First image (Logo. Full height) */
-  .bgimg-1 {background-image: url('image/parallax1.JPG');min-height: 100%;}
+  .parallax-1, .parallax-2 {background-attachment: fixed;background-position: center;background-repeat: no-repeat;background-size: cover;}
+  .parallax-1 {background-image: url("images/tansania-zansibar-island-1.JPG");min-height: 100%;}
+  .parallax-2 {background-image: url("images/belize-scuba-shark-1.JPG");min-height: 45%;}
+
+  /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+  @media only screen and (max-device-width: 1366px) {
+    .parallax-1, .parallax-2 {
+    background-attachment: scroll;
+    }
+  }
 
   .w3-wide {letter-spacing: 10px;}
   .w3-hover-opacity {cursor: pointer;}
@@ -31,9 +37,6 @@
   .w3-dropdown-hover:hover .w3-dropdown-hover:hover .w3-dropdown-content {display:inline;left:100%}
 
   button.readmore {padding:12px 24px!important;color:#000!important;background-color:#f1f1f1!important;border:1px solid #ccc!important;}
-    
-  /* Turn off parallax scrolling for tablets and phones */
-  @media only screen and (max-device-width: 1600px) {.bgimg-1, .bgimg-2, .bgimg-3 {background-attachment: scroll;min-height: 400px;}}
 </style>
 <script src="js/w3.js"></script>
 <body>
@@ -84,7 +87,7 @@
 </div>
 
 <!-- First Parallax Image with Logo Text -->
-<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+<div class="parallax-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
     <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">TRAVEL <span class="w3-hide-small">THE WORLD</span></span>
   </div>
@@ -96,7 +99,7 @@
     <div class="w3-row mySlides w3-animate-opacity">
       <div class="w3-col m6 l4 w3-opacity w3-hover-opacity-off">
         <div class="w3-card-4 w3-margin">
-          <img src="image/test/lion1.JPG" alt="Lion" class="w3-image">
+          <img src="images/uganda-queenelisabeth-lion-1.JPG" alt="Lion" class="w3-image">
           <div class="w3-container w3-center">
             <h3><b>Queen Elisabeth National Park</b></h3>
             <h5>UGANDA , <span class="w3-opacity">SEP 26, 2022</span></h5>
@@ -113,7 +116,7 @@
       </div>
       <div class="w3-col m6 l4 w3-opacity w3-hover-opacity-off">
         <div class="w3-card-4 w3-margin">
-          <img src="image/test/chimpanzee1.JPG" alt="chimp" class="w3-image">
+          <img src="images/uganda-murchisonfalls-chimpanzee-1.JPG" alt="Chimp" class="w3-image">
           <div class="w3-container w3-center">
             <h3><b>Queen Elisabeth National Park</b></h3>
             <h5>UGANDA , <span class="w3-opacity">SEP 26, 2022</span></h5>
@@ -130,7 +133,7 @@
       </div>
       <div class="w3-col m6 l4 w3-opacity w3-hover-opacity-off">
         <div class="w3-card-4 w3-margin">
-          <img src="image/test/elephant1.JPG" alt="elephant" class="w3-image">
+          <img src="images/uganda-murchisonfalls-elephant-1.JPG" alt="Elephant" class="w3-image">
           <div class="w3-container w3-center">
             <h3><b>Queen Elisabeth National Park</b></h3>
             <h5>UGANDA , <span class="w3-opacity">SEP 26, 2022</span></h5>
@@ -149,7 +152,7 @@
     <div class="w3-row mySlides w3-animate-opacity">
         <div class="w3-col m6 l4 w3-opacity w3-hover-opacity-off">
             <div class="w3-card-4 w3-margin">
-                <img src="image/test/gorilla1.JPG" alt="gorilla" class="w3-image">
+                <img src="images/uganda-bwindi-gorilla1.JPG" alt="Gorilla" class="w3-image">
                 <div class="w3-container w3-center">
                     <h3><b>Queen Elisabeth National Park</b></h3>
                     <h5>UGANDA , <span class="w3-opacity">SEP 26, 2022</span></h5>
@@ -166,7 +169,7 @@
         </div>
         <div class="w3-col m6 l4 w3-opacity w3-hover-opacity-off">
             <div class="w3-card-4 w3-margin">
-                <img src="image/test/massai1.JPG" alt="massai" class="w3-image">
+                <img src="images/tansania-zansibar-massai-1.JPG" alt="Massai" class="w3-image">
                 <div class="w3-container w3-center">
                     <h3><b>Queen Elisabeth National Park</b></h3>
                     <h5>UGANDA , <span class="w3-opacity">SEP 26, 2022</span></h5>
@@ -183,7 +186,7 @@
         </div>
         <div class="w3-col m6 l4 w3-opacity w3-hover-opacity-off">
             <div class="w3-card-4 w3-margin">
-                <img src="image/test/rhino1.JPG" alt="rhino" class="w3-image">
+                <img src="images/uganda-ziwa-rhino-1.JPG" alt="Rhino" class="w3-image">
                 <div class="w3-container w3-center">
                     <h3><b>Queen Elisabeth National Park</b></h3>
                     <h5>UGANDA , <span class="w3-opacity">SEP 26, 2022</span></h5>
@@ -236,7 +239,10 @@
   }
 </script>
 
- <!-- Container (About Section) -->
+<!-- Second Parallax Image -->
+<div class="parallax-2 w3-opacity-min"></div>
+
+<!-- Container (About Section) -->
 <div class="w3-content w3-container" id="about">
   <h3 class="w3-center">ABOUT ME</h3>
   <p class="w3-center"><em>I love photography</em></p>
@@ -246,7 +252,7 @@
       <div class="w3-container w3-teal w3-opacity">
         <p><b><i class="fa fa-user w3-margin-right"></i>Miriam Helmstetter</b></p>
       </div>
-      <img src="image/avatar-miriam-1.JPG" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+      <img src="images/avatar-miriam-1.JPG" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
     </div>
   
     <!-- Hide this text on small devices -->
